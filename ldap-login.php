@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/carbon-components@10.5.1/css/carbon-components.min.css">
     <link rel="stylesheet" href="https://unpkg.com/blueprint-css@3.1.1/dist/blueprint.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="ldap-style.css"/>
 
     <style>
         html, body {

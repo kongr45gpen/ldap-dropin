@@ -43,7 +43,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     }
 
     if (isset($error)) {
-        require __DIR__ . '/login.php';
+        require __DIR__ . '/ldap-login.php';
     } else if (isset($success) && $success === true) {
         header('Location: ..');
     }
