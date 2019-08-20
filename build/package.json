@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@carbon/layout": "^10.4.0",
+    "@carbon/type": "^10.4.1",
+    "sass": "^1.22.10"
+  },
+  "scripts": {
+    "build-debug": "sass style.scss -Inode_modules > ../style.css",
+    "build": "sass --style compressed style.scss -Inode_modules > ../style.css"
+  }
+}

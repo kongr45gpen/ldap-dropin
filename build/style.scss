@@ -1,0 +1,7 @@
+@import 'node_modules/@carbon/type/scss/type';
+@import 'node_modules/@carbon/type/scss/font-face/mono';
+@import 'node_modules/@carbon/type/scss/font-face/sans';
+@import 'node_modules/@carbon/type/scss/classes';
+
+@include carbon--font-face-sans();
+@include carbon--type-classes();
