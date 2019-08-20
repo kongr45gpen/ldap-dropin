@@ -47,6 +47,7 @@
 
 <div bp="container">
 
+    <?php if (isset($error)) { ?>
     <section data-notification class="bx--inline-notification bx--inline-notification--error" role="alert">
         <div class="bx--inline-notification__details">
             <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
@@ -57,7 +58,7 @@
             </svg>
             <div class="bx--inline-notification__text-wrapper">
                 <p class="bx--inline-notification__title">Invalid credentials</p>
-                <p class="bx--inline-notification__subtitle">Subtitle text goes here.</p>
+                <p class="bx--inline-notification__subtitle"><?php echo $error; ?></p>
             </div>
         </div>
         <button data-notification-btn class="bx--inline-notification__close-button" type="button" aria-label="close">
@@ -68,9 +69,10 @@
             </svg>
         </button>
     </section>
+    <?php } ?>
 
 
-    <section class="login" bp="padding--lg">
+    <section class="login <?php if($error) echo 'login-error'; ?>" bp="padding--lg">
         <h1 class="bx--type-productive-heading-04">Login</h1>
 
         <p class="bx--type-body-long-02" bp="margin-top--lg">Please enter your LDAP credentials below.</p>
@@ -79,7 +81,7 @@
             eum. Essent viderer sed ea, et esse detraxit usu. In pri zril suscipit inimicus. Mea in iusto mentitum
             laboramus, quas iriure temporibus eu vim.</p>
 
-        <form action="check.php" method="post">
+        <form action="ldap-check.php" method="post">
             <div class="bx--form-item" bp="margin-top--lg">
                 <label for="username" class="bx--label">Username</label>
                 <input id="username" type="text" class="bx--text-input" name="username" placeholder="username">
@@ -89,7 +91,7 @@
                 <input id="password" type="password" class="bx--text-input" name="password" placeholder="password">
             </div>
             <div class="bx--form-item" bp="margin-top--lg">
-                <button class="bx--btn bx--btn--primary" type="button">Submit</button>
+                <button class="bx--btn bx--btn--primary" type="submit">Submit</button>
             </div>
         </form>
     </section>
